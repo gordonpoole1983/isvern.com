@@ -218,6 +218,53 @@
       line-height: 1.7;
     }
 
+    /* ── Person ── */
+    .person {
+      padding: 6rem 2rem;
+      background: var(--color-warm);
+    }
+
+    .person-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .person-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 4px;
+      filter: grayscale(0%);
+    }
+
+    .person-text {
+      text-align: left;
+    }
+
+    .person-text h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+    }
+
+    .person-text p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .person-text p:last-child {
+      margin-bottom: 0;
+    }
+
     /* ── Contact ── */
     .contact {
       padding: 6rem 2rem;
@@ -314,6 +361,20 @@
         gap: 2rem;
       }
 
+      .person-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .person-photo {
+        max-width: 240px;
+        margin: 0 auto;
+      }
+
+      .person-text {
+        text-align: center;
+      }
+
       footer {
         padding: 1.5rem;
       }
@@ -350,7 +411,7 @@
     <div class="about-inner">
       <p class="section-label">Who we are</p>
       <h2>Clarity in complexity</h2>
-      <p>We are a strategic communications advisory firm. We help ambitious organisations navigate critical moments — from shaping public perception to managing stakeholder relationships — with precision, discretion, and purpose.</p>
+      <p>We are a strategic communications advisory firm rooted in financial communications. We help ambitious organisations navigate their most critical moments — where capital markets, reputation, and stakeholder relationships converge — with precision, discretion, and purpose.</p>
     </div>
   </section>
 
@@ -372,6 +433,20 @@
           <h3>Stakeholder Engagement</h3>
           <p>Building and maintaining the relationships essential to your organization's success.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Person Behind Isvern -->
+  <section class="person">
+    <div class="person-inner">
+      <img src="gordon.jpeg" alt="Gordon Poole — Founder, Isvern Advisory" class="person-photo">
+      <div class="person-text">
+        <p class="section-label">The person behind Isvern</p>
+        <h2>Gordon Poole</h2>
+        <p>Gordon is a senior strategic and financial communications adviser with over 20 years of experience guiding public and private companies through some of their most consequential moments. While he has a particular depth of expertise in the natural resources sector, his experience extends across a range of industries, advising businesses wherever complex narratives, demanding stakeholders, and high-stakes decisions intersect.</p>
+        <p>A qualified solicitor in the UK, Gordon brings a rare combination of legal rigour and commercial instinct to every mandate. He currently serves as a Special Adviser to the Paris Peace Forum's Global Council for Responsible Transition Minerals, reflecting a long-standing commitment to the responsible development of the sector.</p>
+        <p>Isvern was founded on a simple belief: that the best communications counsel is senior, experienced, and fully invested — with the adviser who wins the work being the one who does it.</p>
       </div>
     </div>
   </section>
