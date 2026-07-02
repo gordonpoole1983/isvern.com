@@ -338,6 +338,102 @@
       border-color: rgba(255, 255, 255, 0.6);
     }
 
+    /* ── Enquiry Form ── */
+    .enquiry {
+      padding: 6rem 2rem;
+    }
+
+    .enquiry-inner {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .enquiry h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+    }
+
+    .enquiry > .enquiry-inner > p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .enquiry-form {
+      text-align: left;
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-text-light);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--color-text);
+      background: var(--color-bg);
+      border: 1px solid var(--color-line);
+      border-radius: 2px;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-accent);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #fff;
+      background: var(--color-accent);
+      border: 1px solid var(--color-accent);
+      padding: 0.85rem 2.5rem;
+      border-radius: 2px;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .form-submit:hover {
+      background: #1a2d3d;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.05rem;
+      color: var(--color-accent);
+    }
+
     /* ── Footer ── */
     footer {
       padding: 2rem 3rem;
@@ -428,6 +524,7 @@
     <div class="hero-line"></div>
     <h2>Senior strategic and financial communications counsel — delivered by the adviser you brief.</h2>
     <p>Isvern Advisory works with leaders and organisations at the intersection of capital markets, reputation, and stakeholder relationships — where communication is not just important, but decisive.</p>
+    <p>Isvern was founded on a simple belief: that the best communications counsel is senior, experienced, and fully invested.</p>
   </section>
 
   <!-- About -->
@@ -435,7 +532,8 @@
     <div class="about-inner">
       <p class="section-label">Who we are</p>
       <h2>Clarity in complexity</h2>
-      <p>Some communications challenges are straightforward. Most that reach us are not. We work with leaders and organisations on situations that are complex, sensitive, and consequential — where understanding the commercial and reputational stakes in equal measure, and the discretion and judgement that only comes with experience, genuinely makes the difference.</p>
+      <p>Some communications challenges are straightforward. Most that reach us are not. We are experts in our field and work directly with C-suite and their broader team in both private and publicly listed companies delivering bespoke communications strategies. We leverage our deep industry expertise and global networks to influence where it matters supporting our clients growth and reputation.</p>
+      <p style="margin-top: 1rem;">In complex, sensitive, and consequential moments we believe understanding the commercial and reputational stakes in equal measure, and the discretion and judgement that only comes with experience, genuinely makes the difference.</p>
     </div>
   </section>
 
@@ -444,6 +542,7 @@
     <div class="services-inner">
       <p class="section-label">What we do</p>
       <h2>Our Practice</h2>
+      <p style="font-size: 1rem; font-weight: 300; color: var(--color-text-light); line-height: 1.7; max-width: 650px; margin: 0 auto 2.5rem;">We are adaptable and flexible in how we approach our role ensuring we form a trusted partnership. We provide:</p>
       <div class="services-grid">
         <div class="service-item">
           <h3>Financial Communications</h3>
@@ -476,23 +575,45 @@
         <img src="gordon.jpeg" alt="Gordon Poole — Founder, Isvern Advisory" class="person-photo">
       </div>
       <div class="person-text">
-        <p class="section-label">The person behind Isvern</p>
+        <p class="section-label">Senior Leadership</p>
         <h2>Gordon Poole</h2>
-        <p style="font-weight: 400; color: var(--color-text); margin-bottom: 1.5rem;">Founder and Director</p>
-        <p>Gordon is a senior strategic and financial communications adviser with nearly two decades of experience guiding public and private companies through some of their most consequential moments. While he has a particular depth of expertise in the natural resources sector, his experience extends across a range of industries, advising businesses wherever complex narratives, demanding stakeholders, and high-stakes decisions intersect.</p>
+        <p style="font-weight: 400; color: var(--color-text); margin-bottom: 1.5rem;">Founder and Managing Director</p>
+        <p>Gordon is a senior strategic and financial communications adviser with two decades of experience guiding public and private companies through some of their most consequential moments. Gordon has particular expertise in natural resources latterly leading the Mining team at Camarco, an APCO Worldwide Company for over 10 years. His experience extends beyond the natural resources sector, into energy, renewables, industrials and financials advising businesses wherever complex narratives, demanding stakeholders, and high-stakes decisions intersect.</p>
         <p>A qualified solicitor in the UK, Gordon brings a rare combination of legal rigour and commercial instinct to every mandate. He currently serves as a Special Advisor to the Paris Peace Forum's Global Council for Responsible Transition Minerals, reflecting a long-standing commitment to the responsible development of the sector.</p>
-        <p>Isvern was founded on a simple belief: that the best communications counsel is senior, experienced, and fully invested.</p>
+        <p style="margin-top: 0.5rem;"><a href="https://www.linkedin.com/in/gordon-poole-9032aa43/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: none; font-weight: 400; font-size: 0.9rem;">View LinkedIn Profile &rarr;</a></p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
+  <!-- Enquiry -->
+  <section class="enquiry" id="contact">
+    <div class="enquiry-inner">
       <p class="section-label">Get in touch</p>
       <h2>Let's start a conversation</h2>
       <p>Whether you're navigating a critical moment or planning for what's ahead, we'd welcome the chance to hear from you.</p>
-      <a href="mailto:gordonpoole@isvern.com" class="contact-email">gordonpoole@isvern.com</a>
+      <form class="enquiry-form" id="enquiry-form" action="https://formspree.io/f/xwpodqpb" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" name="company">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="request">Request</label>
+          <textarea id="request" name="request" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send Enquiry</button>
+      </form>
+      <div class="form-success" id="form-success">
+        <p>Thank you for your enquiry. We'll be in touch shortly.</p>
+      </div>
+      <p style="margin-top: 2rem; font-size: 0.9rem;">Or email us directly at <a href="mailto:gordonpoole@isvern.com" style="color: var(--color-accent); text-decoration: none; font-weight: 400;">gordonpoole@isvern.com</a></p>
     </div>
   </section>
 
@@ -506,6 +627,23 @@
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Enquiry form handling
+    const form = document.getElementById('enquiry-form');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').style.display = 'block';
+        }
+      } catch (err) {
+        // Fallback: submit normally
+        form.submit();
+      }
     });
   </script>
 
