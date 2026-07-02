@@ -591,8 +591,7 @@
       <p class="section-label">Get in touch</p>
       <h2>Let's start a conversation</h2>
       <p>Whether you're navigating a critical moment or planning for what's ahead, we'd welcome the chance to hear from you.</p>
-      <form class="enquiry-form" id="enquiry-form" action="https://formspree.io/f/mlgyonww" method="POST">
-        <input type="hidden" name="_next" value="https://isvern.com?sent=true">
+      <form action="https://formspree.io/f/mlgyonww" method="POST">
         <div class="form-group">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
@@ -603,17 +602,14 @@
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <input type="email" id="email" name="_replyto" required>
         </div>
         <div class="form-group">
           <label for="request">Request</label>
-          <textarea id="request" name="request" required></textarea>
+          <textarea id="request" name="message" required></textarea>
         </div>
-        <button type="submit" class="form-submit">Send Enquiry</button>
+        <input type="submit" value="Send Enquiry" class="form-submit">
       </form>
-      <div class="form-success" id="form-success">
-        <p>Thank you for your enquiry. We'll be in touch shortly.</p>
-      </div>
       <p style="margin-top: 2rem; font-size: 0.9rem;">Or email us directly at <a href="mailto:gordonpoole@isvern.com" style="color: var(--color-accent); text-decoration: none; font-weight: 400;">gordonpoole@isvern.com</a></p>
     </div>
   </section>
