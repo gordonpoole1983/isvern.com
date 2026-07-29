@@ -229,6 +229,58 @@
       line-height: 1.7;
     }
 
+    /* ── Sectors ── */
+    .sectors {
+      padding: 6rem 2rem;
+      background: var(--color-warm);
+    }
+
+    .sectors-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .sectors h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      margin-bottom: 2.5rem;
+    }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .sector-item {
+      padding: 2rem 1.5rem;
+      background: var(--color-bg);
+      border-radius: 2px;
+      border: 1px solid var(--color-line);
+    }
+
+    .sector-item h3 {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-accent);
+      margin-bottom: 0;
+    }
+
+    .sectors-broader {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 1.7;
+    }
+
+    .sectors-broader strong {
+      font-weight: 500;
+      color: var(--color-text);
+    }
+
     /* ── Person ── */
     .person {
       padding: 6rem 2rem;
@@ -480,6 +532,10 @@
         gap: 2rem;
       }
 
+      .sectors-grid {
+        grid-template-columns: 1fr;
+      }
+
       .person-inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -565,6 +621,26 @@
           <p>Clear heads and sound judgement when the pressure is highest and the margin for error is smallest.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Sector Expertise -->
+  <section class="sectors">
+    <div class="sectors-inner">
+      <p class="section-label">Sector expertise</p>
+      <h2>Industries We Know</h2>
+      <div class="sectors-grid">
+        <div class="sector-item">
+          <h3>Mining</h3>
+        </div>
+        <div class="sector-item">
+          <h3>Mining Private Equity</h3>
+        </div>
+        <div class="sector-item">
+          <h3>New Energy &amp; Energy Transition</h3>
+        </div>
+      </div>
+      <p class="sectors-broader">Broader expertise in <strong>Renewables</strong>, <strong>Industrials</strong>, and <strong>Financial Services</strong></p>
     </div>
   </section>
 
