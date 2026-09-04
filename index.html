@@ -16,12 +16,17 @@
     }
 
     :root {
-      --color-bg: #FAFAF8;
-      --color-text: #1A1A1A;
-      --color-text-light: #6B6B6B;
-      --color-accent: #2C3E50;
-      --color-line: #D4D0C8;
-      --color-warm: #E8ECF0;
+      --color-bg: #1E2630;
+      --color-bg-alt: #242E39;
+      --color-bg-card: #2A3440;
+      --color-bg-warm: #F5F3EF;
+      --color-text: #F0EDE8;
+      --color-text-dark: #1A1A1A;
+      --color-text-light: #C8C5BD;
+      --color-text-light-on-warm: #6B6B6B;
+      --color-accent: #C9A24C;
+      --color-line: rgba(201, 162, 76, 0.2);
+      --color-line-warm: #D4D0C8;
     }
 
     html {
@@ -47,7 +52,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(250, 250, 248, 0.9);
+      background: rgba(30, 38, 48, 0.92);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid transparent;
@@ -89,10 +94,10 @@
     }
 
     .nav-link:hover {
-      color: var(--color-text);
+      color: var(--color-accent);
     }
 
-    /* ── Hero ── */
+    /* ── Hero (dark) ── */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -125,7 +130,7 @@
     .hero-line {
       width: 48px;
       height: 1px;
-      background: var(--color-line);
+      background: var(--color-accent);
       margin: 2rem auto;
       opacity: 0;
       animation: fadeUp 0.8s ease 0.6s forwards;
@@ -137,6 +142,7 @@
       font-weight: 500;
       line-height: 1.4;
       max-width: 650px;
+      color: var(--color-accent);
       opacity: 0;
       animation: fadeUp 0.8s ease 0.6s forwards;
     }
@@ -152,10 +158,11 @@
       animation: fadeUp 0.8s ease 0.8s forwards;
     }
 
-    /* ── About section ── */
+    /* ── About section (warm/light) ── */
     .about {
       padding: 6rem 2rem;
-      background: var(--color-warm);
+      background: var(--color-bg-warm);
+      color: var(--color-text-dark);
     }
 
     .about-inner {
@@ -169,8 +176,14 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: var(--color-text-light);
+      color: var(--color-accent);
       margin-bottom: 1.5rem;
+    }
+
+    .about .section-label,
+    .sectors .section-label,
+    .enquiry .section-label {
+      color: #A6863A;
     }
 
     .about h2 {
@@ -179,18 +192,19 @@
       font-weight: 400;
       line-height: 1.4;
       margin-bottom: 1.5rem;
+      color: var(--color-text-dark);
     }
 
     .about p {
       font-size: 1rem;
       font-weight: 300;
-      color: var(--color-text-light);
+      color: var(--color-text-light-on-warm);
       line-height: 1.8;
       max-width: 600px;
       margin: 0 auto;
     }
 
-    /* ── Services ── */
+    /* ── Services (dark) ── */
     .services {
       padding: 6rem 2rem;
     }
@@ -215,6 +229,18 @@
       text-align: left;
     }
 
+    .service-item {
+      padding: 1.5rem;
+      background: var(--color-bg-card);
+      border-radius: 4px;
+      border: 1px solid rgba(201, 162, 76, 0.08);
+      transition: border-color 0.3s ease;
+    }
+
+    .service-item:hover {
+      border-color: rgba(201, 162, 76, 0.25);
+    }
+
     .service-item h3 {
       font-size: 0.95rem;
       font-weight: 500;
@@ -229,10 +255,11 @@
       line-height: 1.7;
     }
 
-    /* ── Sectors ── */
+    /* ── Sectors (warm/light) ── */
     .sectors {
       padding: 6rem 2rem;
-      background: var(--color-warm);
+      background: var(--color-bg-warm);
+      color: var(--color-text-dark);
     }
 
     .sectors-inner {
@@ -246,6 +273,7 @@
       font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: 400;
       margin-bottom: 2.5rem;
+      color: var(--color-text-dark);
     }
 
     .sectors-grid {
@@ -257,34 +285,38 @@
 
     .sector-item {
       padding: 2rem 1.5rem;
-      background: var(--color-bg);
-      border-radius: 2px;
-      border: 1px solid var(--color-line);
+      background: #FFFFFF;
+      border-radius: 4px;
+      border: 1px solid var(--color-line-warm);
+      transition: border-color 0.3s ease;
+    }
+
+    .sector-item:hover {
+      border-color: var(--color-accent);
     }
 
     .sector-item h3 {
       font-size: 0.95rem;
       font-weight: 500;
-      color: var(--color-accent);
+      color: var(--color-text-dark);
       margin-bottom: 0;
     }
 
     .sectors-broader {
       font-size: 0.95rem;
       font-weight: 300;
-      color: var(--color-text-light);
+      color: var(--color-text-light-on-warm);
       line-height: 1.7;
     }
 
     .sectors-broader strong {
       font-weight: 500;
-      color: var(--color-text);
+      color: var(--color-text-dark);
     }
 
-    /* ── Person ── */
+    /* ── Person (dark) ── */
     .person {
       padding: 6rem 2rem;
-      background: var(--color-warm);
     }
 
     .person-inner {
@@ -302,7 +334,7 @@
       object-fit: cover;
       object-position: center top;
       border-radius: 4px;
-      filter: grayscale(0%);
+      border: 2px solid rgba(201, 162, 76, 0.2);
     }
 
     .person-text {
@@ -328,71 +360,11 @@
       margin-bottom: 0;
     }
 
-    .person-history {
-      margin-top: 1.2rem;
-    }
-
-    .person-history p {
-      font-size: 0.8rem;
-      font-weight: 300;
-      color: var(--color-text-light);
-      line-height: 1.6;
-      margin-bottom: 0.2rem;
-    }
-
-    /* ── Contact ── */
-    .contact {
-      padding: 6rem 2rem;
-      background: var(--color-accent);
-      color: #fff;
-    }
-
-    .contact-inner {
-      max-width: 600px;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-    .contact .section-label {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    .contact h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    .contact p {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      line-height: 1.7;
-      margin-bottom: 2rem;
-    }
-
-    .contact-email {
-      display: inline-block;
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: #fff;
-      text-decoration: none;
-      padding: 0.85rem 2.2rem;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 2px;
-      letter-spacing: 0.03em;
-      transition: all 0.3s ease;
-    }
-
-    .contact-email:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.6);
-    }
-
-    /* ── Enquiry Form ── */
+    /* ── Enquiry Form (warm/light) ── */
     .enquiry {
       padding: 6rem 2rem;
+      background: var(--color-bg-warm);
+      color: var(--color-text-dark);
     }
 
     .enquiry-inner {
@@ -406,12 +378,13 @@
       font-size: clamp(1.5rem, 3vw, 2.2rem);
       font-weight: 400;
       margin-bottom: 0.5rem;
+      color: var(--color-text-dark);
     }
 
     .enquiry > .enquiry-inner > p {
       font-size: 1rem;
       font-weight: 300;
-      color: var(--color-text-light);
+      color: var(--color-text-light-on-warm);
       line-height: 1.7;
       margin-bottom: 2rem;
     }
@@ -430,7 +403,7 @@
       font-weight: 500;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: var(--color-text-light);
+      color: var(--color-text-light-on-warm);
       margin-bottom: 0.4rem;
     }
 
@@ -441,9 +414,9 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.95rem;
       font-weight: 300;
-      color: var(--color-text);
-      background: var(--color-bg);
-      border: 1px solid var(--color-line);
+      color: var(--color-text-dark);
+      background: #FFFFFF;
+      border: 1px solid var(--color-line-warm);
       border-radius: 2px;
       transition: border-color 0.2s ease;
     }
@@ -464,9 +437,9 @@
       font-family: 'Inter', sans-serif;
       font-size: 0.9rem;
       font-weight: 400;
-      color: #fff;
-      background: var(--color-accent);
-      border: 1px solid var(--color-accent);
+      color: #FFFFFF;
+      background: var(--color-bg);
+      border: 1px solid var(--color-bg);
       padding: 0.85rem 2.5rem;
       border-radius: 2px;
       letter-spacing: 0.03em;
@@ -475,30 +448,27 @@
     }
 
     .form-submit:hover {
-      background: #1a2d3d;
+      background: #242E39;
     }
 
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-      font-size: 1.05rem;
-      color: var(--color-accent);
-    }
-
-    /* ── Footer ── */
+    /* ── Footer (dark) ── */
     footer {
-      padding: 2rem 3rem;
-      background: var(--color-accent);
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2.5rem 3rem;
+      background: var(--color-bg);
       text-align: center;
+      border-top: 1px solid rgba(201, 162, 76, 0.12);
     }
 
     footer p {
       font-size: 0.75rem;
       font-weight: 300;
-      color: rgba(255, 255, 255, 0.35);
+      color: var(--color-text-light);
       letter-spacing: 0.04em;
+    }
+
+    footer a {
+      color: var(--color-accent);
+      text-decoration: none;
     }
 
     /* ── Animations ── */
@@ -523,7 +493,7 @@
         padding: 5rem 1.5rem 3rem;
       }
 
-      .about, .services, .contact {
+      .about, .services, .sectors, .enquiry {
         padding: 4rem 1.5rem;
       }
 
@@ -562,10 +532,10 @@
   <nav id="navbar">
     <a href="#" class="logo">
       <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" rx="4" fill="#2C3E50"/>
-        <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" fill="#FAFAF8" font-family="'Playfair Display', Georgia, serif" font-size="17" font-weight="500">I</text>
+        <rect x="1" y="1" width="30" height="30" rx="3" fill="#1E2630" stroke="#C9A24C" stroke-width="1.5"/>
+        <text x="50%" y="54%" text-anchor="middle" dominant-baseline="middle" fill="#F0EDE8" font-family="'Playfair Display', Georgia, serif" font-size="17" font-weight="500">I</text>
       </svg>
-      <span class="logo-text">Isvern Advisory</span>
+      <span class="logo-text">ISVERN ADVISORY</span>
     </a>
     <a href="#contact" class="nav-link">Contact</a>
   </nav>
@@ -573,8 +543,8 @@
   <!-- Hero -->
   <section class="hero">
     <svg class="hero-logo" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="72" height="72" rx="8" fill="#2C3E50"/>
-      <text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" fill="#FAFAF8" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="500">I</text>
+      <rect x="2" y="2" width="68" height="68" rx="6" fill="#1E2630" stroke="#C9A24C" stroke-width="2"/>
+      <text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" fill="#F0EDE8" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="500">I</text>
     </svg>
     <h1>When the stakes are high, communication has to be right.</h1>
     <div class="hero-line"></div>
@@ -653,7 +623,7 @@
       <div class="person-text">
         <p class="section-label">Senior Leadership</p>
         <h2>Gordon Poole</h2>
-        <p style="font-weight: 400; color: var(--color-text); margin-bottom: 1.5rem;">Founder and Managing Director</p>
+        <p style="font-weight: 400; color: var(--color-accent); margin-bottom: 1.5rem;">Founder and Managing Director</p>
         <p>Gordon is a senior strategic and financial communications adviser with two decades of experience guiding public and private companies as well as individuals through some of their most consequential moments. Gordon has spent his career working in London and Europe advising global businesses and has particular expertise in natural resources, latterly leading the Mining team for over 10 years at Camarco, part of APCO Worldwide, a global advisory, advocacy, and public relations firm. His network and influence extends to all the major capital markets, helping him advise international businesses wherever complex narratives, demanding stakeholders, and high-stakes decisions intersect.</p>
         <p>A qualified solicitor in the UK, Gordon brings a rare combination of legal rigour and commercial instinct to every mandate. He currently serves as a Special Advisor to the Paris Peace Forum's Global Council for Responsible Transition Minerals, reflecting a long-standing commitment to the responsible development of the sector.</p>
         <p style="margin-top: 0.5rem;"><a href="https://www.linkedin.com/in/gordon-poole-9032aa43/" target="_blank" rel="noopener" style="color: var(--color-accent); text-decoration: none; font-weight: 400; font-size: 0.9rem;">View LinkedIn Profile &rarr;</a></p>
@@ -686,12 +656,13 @@
         </div>
         <input type="submit" value="Send Enquiry" class="form-submit">
       </form>
-      <p style="margin-top: 2rem; font-size: 0.9rem;">Or email us directly at <a href="mailto:gordonpoole@isvern.com" style="color: var(--color-accent); text-decoration: none; font-weight: 400;">gordonpoole@isvern.com</a></p>
+      <p style="margin-top: 2rem; font-size: 0.9rem; color: var(--color-text-light-on-warm);">Or email us directly at <a href="mailto:gordonpoole@isvern.com" style="color: var(--color-text-dark); text-decoration: none; font-weight: 400;">gordonpoole@isvern.com</a></p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
+    <p style="margin-bottom: 0.5rem;"><a href="mailto:gordonpoole@isvern.com">gordonpoole@isvern.com</a> &middot; <a href="https://www.linkedin.com/in/gordon-poole-9032aa43/" target="_blank" rel="noopener">LinkedIn</a></p>
     <p>&copy; 2026 Isvern Advisory. All rights reserved.</p>
   </footer>
 
@@ -701,7 +672,6 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
     });
-
   </script>
 
 </body>
