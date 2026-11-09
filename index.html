@@ -255,6 +255,55 @@
       line-height: 1.7;
     }
 
+    /* ── How We Work (dark alt) ── */
+    .approach {
+      padding: 6rem 2rem;
+      background: var(--color-bg-alt);
+      border-top: 1px solid var(--color-line);
+    }
+
+    .approach-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .approach h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      font-weight: 400;
+      margin-bottom: 3rem;
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      text-align: left;
+    }
+
+    .approach-item {
+      padding: 2rem 1.75rem;
+      border-top: 2px solid var(--color-accent);
+      background: var(--color-bg-card);
+      border-radius: 0 0 4px 4px;
+    }
+
+    .approach-item h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--color-accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .approach-item p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--color-text-light);
+      line-height: 1.75;
+    }
+
     /* ── Sectors (warm/light) ── */
     .sectors {
       padding: 6rem 2rem;
@@ -493,7 +542,7 @@
         padding: 5rem 1.5rem 3rem;
       }
 
-      .about, .services, .sectors, .enquiry {
+      .about, .services, .approach, .sectors, .enquiry {
         padding: 4rem 1.5rem;
       }
 
@@ -504,6 +553,11 @@
 
       .sectors-grid {
         grid-template-columns: 1fr;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .person-inner {
@@ -589,6 +643,24 @@
         <div class="service-item">
           <h3>Crisis Communications</h3>
           <p>Clear heads and sound judgement when the pressure is highest and the margin for error is smallest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How We Work -->
+  <section class="approach">
+    <div class="approach-inner">
+      <p class="section-label">Engagement models</p>
+      <h2>How We Work</h2>
+      <div class="approach-grid">
+        <div class="approach-item">
+          <h3>Advisory</h3>
+          <p>Senior counsel on defined situations: transactions, listings, disputes and crises. We assemble specialist support around each mandate as it needs it.</p>
+        </div>
+        <div class="approach-item">
+          <h3>Embedded</h3>
+          <p>For growing companies that need senior communications and IR leadership but not a full-time hire. We work inside the management team, build the function, sharpen the equity story and run market relationships.</p>
         </div>
       </div>
     </div>
